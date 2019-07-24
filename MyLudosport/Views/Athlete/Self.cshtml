@@ -1,0 +1,90 @@
+﻿@model MyLudosport.Models.Athlete
+
+@{
+    ViewData["Title"] = "Self";
+}
+
+<h2>Selfie</h2>
+
+<div>
+    <h4>Athlete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Account)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Account.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BattleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BattleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form6)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form6)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form7)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form7)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form8)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form8)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form9)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form9)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseY)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourseY)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

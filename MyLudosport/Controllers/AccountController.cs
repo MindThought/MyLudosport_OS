@@ -24,6 +24,7 @@ namespace MyLudosport.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private readonly Utility.AthleteUtility _athleteUtility = new Utility.AthleteUtility();
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
@@ -220,7 +221,8 @@ namespace MyLudosport.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var athlete = _athleteUtility.CreateNewAthlete(model.BattleName, HttpContext);
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Athlete = athlete };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

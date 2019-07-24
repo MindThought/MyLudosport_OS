@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MyLudosport.Models.Athlete>
+@{
+    ViewData["Title"] = "Athletes";
+}
+
+<h2>Athletes</h2>
+
+<table class="table">
+    <tr>
+        <th>Battlename</th>
+        <th>Form 1</th>
+        <th>Form 2</th>
+        <th>Course Y</th>
+        <th>Form 3</th>
+        <th>Form 4</th>
+        <th>Form 5</th>
+        <th>Form 6</th>
+        <th>Form 7</th>
+        <th>Form 8</th>
+        <th>Form 9</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@Html.DisplayFor(modelitem => item.BattleName)</th>
+            <th> </th>
+        </tr>
+    }
+</table>
